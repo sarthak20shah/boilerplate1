@@ -1,5 +1,11 @@
+///////////types////////
+
 export const GET_USER = "GET_USER";
 const SET_USER = "SET_USER";
+
+/////////////////
+
+////////action creators//////
 
 export const getUser = () => ({
   type: GET_USER,
@@ -10,10 +16,16 @@ export const setUser = (user) => ({
   user,
 });
 
+/////////////////
+
+////////initial state//////
+
 const initialState = {
   user: undefined,
 };
+////////////////
 
+//////////reducer//////////
 export default (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
@@ -23,3 +35,4 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+////////////////////

@@ -1,6 +1,8 @@
+//types
 const INCREMENT = "increment";
 const DECREMENT = "decrement";
-
+////
+///action creators
 export const increment = () => ({
   type: INCREMENT,
 });
@@ -8,11 +10,13 @@ export const increment = () => ({
 export const decrement = () => ({
   type: DECREMENT,
 });
-
+/////
+////initial state
 const initialState = {
   count: 0,
 };
-
+////////
+/////reducer
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
